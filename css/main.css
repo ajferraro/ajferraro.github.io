@@ -1,6 +1,10 @@
 body {
-    margin: 60px auto;
+    margin: 60px auto 200px;
     width: 70%;
+}
+.clearfix:after {
+    display:block;
+    clear:both;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -22,11 +26,19 @@ a:hover {
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    display: block;
+    margin: 60px 0px 15px;
 }
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
+}
+ol {
+    font-size: 1.5em;
+}
+ul {
+    font-size: 1.5em;
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -41,3 +53,106 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.TextWrap {
+    float:right;
+    margin: 20px;
+}
+
+.TextWrapLeft {
+    clear:right;
+    float:left;
+    margin:20px;
+}
+
+table {
+    font-size: 1.5em;
+    float:right;
+    margin:0 0 10px 50px;
+}​
+
+/*----- Menu Outline -----*/
+.menu-wrap {
+    width: 100%;
+    display: block;
+}
+ 
+.menu {
+    width: 100%;
+    margin:0px auto;
+}
+ 
+.menu li {
+}
+ 
+.menu a {
+    transition:all linear 0.15s;
+}
+ 
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+    background:#2e2728;
+}
+ 
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
+}
+ 
+/*----- Top Level -----*/
+.menu > ul > li {
+    float:left;
+    position:relative;
+    font-size:19px;
+}
+ 
+.menu > ul > li > a {
+    padding:10px 40px;
+    display:block;
+}
+ 
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background:#2e2728;
+}
+ 
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
+}
+ 
+.sub-menu {
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#2e2728;
+}
+ 
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+ 
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+}
+
+
+table.image caption{
+    font-size: 0.8em;
+}
+    
